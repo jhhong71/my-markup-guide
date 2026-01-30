@@ -1,0 +1,129 @@
+/* Guide.scss */
+.guide-container {
+  max-width: 100%;
+  padding: 12px 40px 100px 40px;
+  background-color: var(--white);
+  border-radius: 4px;
+
+  @media (max-width: 1024px) {
+    max-width: -webkit-fill-available;
+    padding: 10px 15px;
+  }
+
+  /* 페이지 타이틀: 묵직한 네이비 */
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--white-500);
+    padding-bottom: 15px;
+    color: var(--black-900);
+    font-weight: 700;
+  }
+
+  /* 섹션 타이틀: 레드 포인트 강조 */
+  .section-title {
+    font-size: 22px;
+    color: var(--brand-red-500); 
+    border-left: 5px solid var(--brand-red-500);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 60px;
+  }
+
+  /* 소제목: 레드로 시선 집중 */
+  .sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    color: var(--black-800);
+  }
+
+  /* 테이블 스크롤을 위한 래퍼(Wrapper) */
+  .table-scroll {
+    width: 100%;
+    margin-bottom: 20px;
+
+    /* 모바일에서만 가로 스크롤 생성 */
+    @media (max-width: 768px) {
+      overflow-x: auto;
+      
+      /* 스크롤바 디자인 */
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--gray-300);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  /* 테이블 스타일: 네이비 헤더 + 깔끔한 라인 */
+  .guide-table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-top: 2px solid var(--black-700);
+
+    @media (max-width: 768px) {
+      white-space: nowrap; 
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: var(--white-300);
+      border-bottom: 1px solid var(--border-gray-dd); 
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      color: var(--black-700);
+      box-shadow: 0 1px 0 var(--border-gray-dd);
+    }
+
+    td {
+      border-bottom: 1px solid var(--border-gray-dd); /* 기존 #ddd 대응 */
+      padding: 12px;
+      color: var(--black-500); /* 기존 #555 대응 */
+      line-height: 1.6;
+      vertical-align: middle;
+
+      /* 유틸리티 클래스 (내부 요소용) */
+      &.text-center { text-align: center; }
+      
+      &.font-bold { 
+        font-weight: bold; 
+        color: var(--black-900); /* 기존 #000 대응 */
+      }
+    }
+  }
+
+  /* 링크: 브랜드 레드 */
+  .text-link {
+    color: var(--brand-red-500);
+    text-decoration: underline;
+    font-weight: 600;
+    
+    &:hover {
+      color: var(--brand-red-600);
+    }
+  }
+  
+  /* 리스트 */
+  .guide-list li {
+    position: relative;
+    padding-left: 15px;
+    
+    &::before {
+      content: "•";
+      color: var(--brand-red-500); /* 불렛 포인트 레드 */
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+}

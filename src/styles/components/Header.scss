@@ -1,0 +1,107 @@
+@import '../variables';
+
+.header-wrapper {
+  position: relative;
+  height: 80px;
+  border-bottom: 1px solid var(--white-500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: var(--white);
+  
+  // 로고 영역
+  .logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.2;
+
+      a {
+        color: var(--brand-red-500);
+        text-decoration: none;
+      }
+    }
+
+    .author-text {
+      font-size: 14px;
+      color: var(--black-500);
+      font-weight: bold;
+    }
+  }
+
+  // 우측 네비게이션 (데스크탑)
+  .gnb {
+    .gnb-list {
+      display: flex;
+      gap: 30px;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        a {
+          text-decoration: none;
+          color: var(--black-800);
+          font-weight: 500;
+          position: relative;
+          padding-bottom: 5px;
+
+          // 밑줄 애니메이션 (옵션 1번 적용)
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            transform: translateX(-50%);
+            background-color: var(--brand-red-500);
+            transition: width 0.3s ease-in-out;
+          }
+
+          &:hover {
+            color: var(--brand-red-600);
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    // 모바일에서는 GNB 숨김
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  // 모바일 햄버거 버튼 (우측 상단)
+  .mobile-menu-btn {
+    display: none; // PC에서는 숨김
+    cursor: pointer;
+    background: none;
+    border: none;
+    
+    // 모바일에서만 보임
+    @media (max-width: 1024px) {
+      display: block;
+      margin-left: auto;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+  
+  // 모바일 패딩 조정 (선택사항)
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}

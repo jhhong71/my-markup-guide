@@ -1,0 +1,31 @@
+/* src/components/ui/Button/Button.scss */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+
+  // 크기 옵션
+  &.small { padding: 5px 10px; font-size: 12px; }
+  &.medium { padding: 10px 20px; font-size: 14px; }
+  &.large { padding: 15px 30px; font-size: 16px; }
+
+  // 색상 옵션
+  &.primary {
+    background-color: #006e51; // 메인 초록색
+    color: white;
+    &:hover { background-color: darken(#006e51, 10%); }
+  }
+
+  &.secondary {
+    background-color: #eee;
+    color: #333;
+    &:hover { background-color: #ddd; }
+  }
+}

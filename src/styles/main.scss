@@ -1,0 +1,18 @@
+// 1. Reset (가장 먼저 초기화)
+@import 'base/reset';
+// 2. Root Variables (변수 선언)
+@import 'base/root';
+//3. Utilities (공통 클래스 및 폰트)
+@import 'base/utils';
+
+// 전역 스타일 설정
+body {
+  font-family: var(--Pretendard), -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: var(--black-800);
+  line-height: 1.5;
+  background-color: var(--white);
+  -webkit-font-smoothing: antialiased; /* 폰트 부드럽게 */
+}
+
+// 3. 페이지별 스타일 (필요시 추가)
+@import 'pages/Guide';

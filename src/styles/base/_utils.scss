@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* Fonts Import */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/noto-sans-kr.min.css");
+/* ... 나머지 폰트 import 구문들 ... */
+
+/* Font Family Classes */
+.pd-pretendard { font-family: var(--Pretendard); }
+.pd-notosansKr { font-family: var(--notosansKr); }
+
+/* Text Sizes */
+.pd-text-xs { font-size: 12px; }
+.pd-text-sm { font-size: 14px; }
+.pd-text-base { font-size: 16px; }
+.pd-text-lg { font-size: 18px; }
+.pd-text-xl { font-size: 20px; }
+.pd-text-2xl { font-size: 24px; }
+
+/* Font Weights */
+.pd-font-light { font-weight: 300; }
+.pd-font-normal { font-weight: 400; }
+.pd-font-medium { font-weight: 500; }
+.pd-font-bold { font-weight: 700; }
+
+/* Form Elements Reset */
+select, button, textarea, input {
+  appearance: none;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: var(--Pretendard);
+  font-size: inherit;
+  color: inherit;
+  outline: 0;
+}
+
+/* Layout & Spacing Helpers */
+.pd-flex-row { flex-direction: row !important; }
+.pd-flex-col { flex-direction: column; }
+.pd-justify-center { justify-content: center; }
+.pd-align-center { align-items: center; }
+.pd-space-between { justify-content: space-between; }
+
+/* Width Utilities */
+.pd-w-full { width: 100% !important; }
+.pd-w-auto { width: auto; }
+
+/* Margins & Paddings (Examples) */
+.pd-mt10 { margin-top: 10px; }
+.pd-mb20 { margin-bottom: 20px; }
+.pd-pt10 { padding-top: 10px; }
+.pd-pb20 { padding-bottom: 20px; }
+
+/* Blind / Skip */
+.blind {
+  position: absolute;
+  left: -3721em;
+}
+a.skip {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  /* ... 생략 ... */
+}
+
+/* Skeleton Animation */
+.pd-animate-skeleton {
+  animation: pd-skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pd-skeleton {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

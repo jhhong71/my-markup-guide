@@ -1,0 +1,94 @@
+/* Root Variables */
+:root {
+  --layout-width: 1280px;
+  --layout-padding: 5.13vw;
+  
+  /* Fonts */
+  --Pretendard: "Pretendard", sans-serif;
+  --SUIT: "SUIT", sans-serif;
+  --notosansKr: "Noto Sans KR", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+  --spoqaHanSansNeo: "Spoqa Han Sans Neo", sans-serif;
+  --pretendardVariable: "Pretendard Variable", sans-serif;
+  --Saira: "Saira", sans-serif;
+  --GmarketSansBold: "GmarketSansBold", sans-serif;
+  --GmarketSansLight: "GmarketSansLight", sans-serif;
+  
+  --font-size: 16px;
+  --font-let-spc: -0.02em;
+  --line-height: 1.5;
+  --default-font-color: #46464F;
+  --disabled-color: #e7e7e7;
+  --notch: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+  /* --- Brand Colors (AgencyPro Identity) --- */
+  /* 메인 포인트: 강렬한 레드 */
+  --brand-red-500: #E43E3E; /* 로고와 유사한 메인 레드 */
+  --brand-red-600: #D23325; /* 버튼 호버용 진한 레드 */
+  --brand-red-100: #FEF2F2; /* 아주 연한 레드 (배경용) */
+
+  /* 서브 베이스: 신뢰의 네이비 (UI 골격) */
+  --base-navy-900: #0A0B25; /* 아주 어두운 네이비 (푸터) */
+  --base-navy-800: #0f3773; /* 짙은 네이비 (헤더, 강조 텍스트) */
+  --base-navy-700: #1a4a90; 
+  --base-navy-100: #F2F2FC; /* 연한 네이비 (테이블 헤더 등) */
+
+  /* --- Functional Colors --- */
+  --primary: var(--brand-red-500);       /* 주요 동작 (버튼, 링크) */
+  --secondary: var(--base-navy-800);     /* 주요 골격 (타이틀, 테두리) */
+  
+  /* Colors - Primary */
+  --primary-50: #F8F9FD;
+  --primary-100: #F2F2FC;
+  --primary-200: #EBEBFA;
+  --primary-300: #999CE4;
+  --primary-400: #0c62e3;
+  --primary-500: #1460d2; /* 메인 컬러 */
+  --primary-600: #0f3773;
+  --primary-700: #37396D;
+  --primary-800: #0A0B25;
+
+  /* Colors - Grayscale */
+  --black-900: #000000;
+  --black-800: #121212;
+  --black-750: #222222;
+  --black-700: #303030;
+  --black-600: #404040;
+  --black-500: #555555;
+  --black-400: #8E8E8E;
+  --black-300: #B8B8B8;
+  --black-op-900: rgba(0,0,0,0.5);
+
+  --gray-80: #c8c8c8;
+  --gray-100: #a9acac;
+  --gray-200: #929292;
+  --gray-300: #8d96a5;
+  --gray-350: #757575;
+  --gray-400: #565656;
+  --gray-500: #4a4a4a;
+  --gray-750: #414146;
+  --gray-800: #444748;
+
+  --white: #ffffff;
+  --white-50: #FCFCFC;
+  --white-100: #fafafa;
+  --white-300: #F5F5F5;
+  --white-400: #f1f1f1;
+  --white-500: #eaeaea;
+  --white-600: #DDDDDD;
+
+  /* Colors - Status & Etc */
+  --red-500: #E43E3E;
+  --red-600: #D23325;
+  --blue-400: #256fff;
+  --blue-500: #2269D1;
+  --green-500: #80B430;
+  --orange-500: #FA7C35;
+  
+  --border-gray-dd: #dddddd;
+  --btn-default-border-color: #ddd;
+  --btn-default-font-color: #404040;
+  
+  /* Skeleton */
+  --skeleton-bg: linear-gradient(90deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 50%, #e5e5e5 48%);
+}
