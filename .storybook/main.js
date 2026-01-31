@@ -13,6 +13,12 @@ const config = {
     "@storybook/addon-docs",
     "@storybook/addon-onboarding"
   ],
-  "framework": "@storybook/react-vite"
+  "framework": "@storybook/react-vite",
+  async viteFinal(config) {
+    return {
+      ...config,
+      base: './',  // 내 현재 위치(./)를 기준으로
+    };
+  },
 };
 export default config;
