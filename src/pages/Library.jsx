@@ -8,7 +8,7 @@ const Library = () => {
         개발 중에는 localhost:6006을 바라보게 합니다.
       */}
       <iframe
-        src="http://localhost:6006"
+        src="/storybook/index.html"
         title="Storybook"
         style={{
           width: '100%',
