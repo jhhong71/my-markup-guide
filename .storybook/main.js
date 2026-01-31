@@ -14,11 +14,12 @@ const config = {
     "@storybook/addon-onboarding"
   ],
   "framework": "@storybook/react-vite",
-  async viteFinal(config) {
-    return {
-      ...config,
-      base: './',  // 내 현재 위치(./)를 기준으로
-    };
+  async viteFinal(config, { configType }) {
+    // 1. 배포(PRODUCTION) 모드일 때만 경로를 강제로 '/storybook/'으로 고정
+    if (configType === 'PRODUCTION') {
+      config.base = '/storybook/';
+    }
+    return config;
   },
 };
 export default config;
